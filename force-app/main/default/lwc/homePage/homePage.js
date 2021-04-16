@@ -1,5 +1,5 @@
 import { LightningElement, wire, track } from 'lwc';
-import getItemTypes from '@salesforce/apex/ItemTestClass.getItemTypes';
+import getItemTypes from '@salesforce/apex/ItemController.getItemTypes';
 import searchItems from '@salesforce/apex/ItemController.searchItems';
 import addCheckoutItems from '@salesforce/apex/CheckoutController.addCheckoutItems';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';

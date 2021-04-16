@@ -6,18 +6,14 @@ public with sharing class ItemController {
     @AuraEnabled(cacheable=true)
     public static List<Item__c> getItemList() {
         return [Select author__C, name, publisher__c, type__r.name from Item__c];
-        /*System.debug('Records returned:' + types.size());
-        System.debug('List:' + types);*/
     }
 
     @AuraEnabled(cacheable=true)
     public static List<Item_type__c> getItemTypes() {
         return [Select Item_Type_Id__c, name from Item_type__c];
-        /*System.debug('Records returned:' + types.size());
-        System.debug('List:' + types);*/
     }
 
-    //search api here
+    //search api
     @AuraEnabled(cacheable=true)
     public static List<Item__c> searchItems(string searchString,string type) {
      
