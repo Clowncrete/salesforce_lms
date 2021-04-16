@@ -28,7 +28,7 @@ export default class HomePage extends LightningElement {
       if (isEnterKey) {
          if(evt.target.value.length === 12) {
             addCheckoutItems({barcodes: [evt.target.value]}).then(result => {
-               this.showToastMessage('Message', result.body.message, 'success');
+               this.showToastMessage('Message', result, 'success');
             }, error => {
                this.showToastMessage('Message', error.body.message, 'error');
             });
@@ -72,7 +72,7 @@ export default class HomePage extends LightningElement {
          this.barcodesList.push(this.data[i].barcode);
       }
       addCheckoutItems({barcodes: this.barcodesList}).then(result => {
-         this.showToastMessage('Message', result.body.message, 'success');     
+         this.showToastMessage('Message', result, 'success');     
          location.reload();
       }, error => {
          this.showToastMessage('Message', error.body.message, 'error');
