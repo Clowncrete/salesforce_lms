@@ -1,0 +1,47 @@
+.main-page {
+   background-color: white;
+   padding: 1rem;
+   min-height: 600px;
+}
+
+.loading-spinner{
+   position: relative;
+   display: inline-block;
+   width: 120px;
+   height: 1200px;
+}
+
+.item-card {
+   padding: 1rem;
+   min-height: 150px;
+   max-height: 200px;
+   overflow: hidden;
+}
+
+.item-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   grid-gap: 1rem;
+   margin-top: 5px;
+ }
+
+ .no-records-found {
+   font-weight: bold;
+   font-size: 20;
+ }
+
+.item-details {
+   margin-top: 10px;
+}
+
+.search-filter-box {
+   margin-top: 10px;
+}
+
+.checkout-text-box {
+   width: 200px;
+}
+
+.checkout-text-box {
+   margin-bottom: 5px;
+}

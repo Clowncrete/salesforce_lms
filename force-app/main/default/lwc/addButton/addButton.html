@@ -1,0 +1,17 @@
+<template>
+   <template if:true={isAvailable}>
+      <lightning-button-stateful
+      label-when-off="Add to basket"
+      label-when-on="Added to basket"
+      label-when-hover="Add"
+      icon-name-when-off="utility:add"
+      icon-name-when-on="utility:check"
+      icon-name-when-hover="utility:close"
+      selected={isSelected}
+      onclick={handleClick}>
+      </lightning-button-stateful>
+   </template>
+   <template if:false={isAvailable}>
+      Not Available
+   </template>
+</template>
